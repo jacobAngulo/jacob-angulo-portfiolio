@@ -1,0 +1,22 @@
+.side-nav {
+    background: #313131;
+    height: 95vh;
+    width: 5vw;
+    justify-content: center;
+    display: flex;
+}
+
+.side-nav nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-link {
+    padding-top: 20px;
+    width: 2vw;
+    cursor: pointer;
+}
+
+.icon-link:hover {
+    filter: brightness(200%)
+}

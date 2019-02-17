@@ -1,6 +1,19 @@
 .header {
-    background: red;
-    height: 40px;
+    background: #414141;
+    height: 5vh;
     display: flex;
     align-items: center;
+    padding-left: 17.5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
+
+.header nav a {
+    padding-left: 20px;
+    color: rgb(206, 206, 206);
+}
+
+.logo {
+    height: 4vh;
+    object-fit: contain;
+}
+

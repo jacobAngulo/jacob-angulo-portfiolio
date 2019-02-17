@@ -1,9 +1,15 @@
 import React from 'react';
+import '../side_nav/side-nav.css'
 
 class SideNav extends React.Component {
     render() {
         return (
-            <div className='side-bar'>side nav</div>
+            <div className='side-nav'>
+                <nav>
+                    <a><img className="icon-link" src={require('../images/file-icon.png')}/></a>
+                    <a><img className="icon-link" src={require('../images/search-icon.png')}/></a>
+                </nav>
+            </div>
         )
     }
 }
