@@ -5,7 +5,7 @@ class Header extends React.Component {
     render() {
         return (
             <div className='header'>
-                <img className="logo" src={require('../images/portfolio-logo.png')} />
+                <i class="fas fa-compact-disc"></i>
                 <nav>
                     <a>Hello</a>
                     <a>And</a>

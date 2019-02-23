@@ -1,5 +1,5 @@
 .side-nav {
-    background: #313131;
+    background: #333333;
     height: 95vh;
     width: 5vw;
     justify-content: center;
@@ -11,12 +11,19 @@
     flex-direction: column;
 }
 
-.icon-link {
-    padding-top: 20px;
-    width: 2vw;
+.side-nav nav a {
+    padding-top: 5vh;
+}
+
+.fa-folder-plus, .fa-search-plus {
+    color: #ABABAB;
+    font-size: 3vw;
     cursor: pointer;
 }
 
-.icon-link:hover {
-    filter: brightness(200%)
+.fa-folder-minus, .fa-search-minus {
+    font-size: 3vw;
+    cursor: pointer;
+    color: #FFFFFF
 }
+
