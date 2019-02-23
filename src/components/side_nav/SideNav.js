@@ -11,15 +11,29 @@ class SideNav extends React.Component {
     }
 
     handleOpenFilesTab = () => {
-        this.setState({
-            folder: !this.state.folder
-        })
+        if(this.state.folder === false && this.state.search === true) {
+            this.setState({
+                folder: true,
+                search: false
+            })
+        } else {
+            this.setState({
+                folder: !this.state.folder
+            })
+        }
     }
 
     handleOpenSearchTab = () => {
-        this.setState({
-            search: !this.state.search
-        })
+        if(this.state.search === false && this.state.folder === true) {
+            this.setState({
+                folder: false,
+                search: true
+            })
+        } else {
+            this.setState({
+                search: !this.state.search
+            })
+        }
     }
 
     render() {
@@ -30,7 +44,7 @@ class SideNav extends React.Component {
                     name={'folder'}
                     onClick={this.handleOpenFilesTab}>
                         <i
-                        className={`fas ${this.state.folder ? 'fa-folder-plus' : 'fa-folder-minus'}`}>
+                        className={`fas ${this.state.folder ? 'fa-folder-minus' : 'fa-folder-plus'}`}>
                         </i>
                     </a>
                     <a 

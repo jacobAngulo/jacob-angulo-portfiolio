@@ -17,12 +17,12 @@
 
 .fa-folder-plus, .fa-search-plus {
     color: #ABABAB;
-    font-size: 3vw;
+    font-size: 2.25vw;
     cursor: pointer;
 }
 
 .fa-folder-minus, .fa-search-minus {
-    font-size: 3vw;
+    font-size: 2.25vw;
     cursor: pointer;
     color: #FFFFFF
 }

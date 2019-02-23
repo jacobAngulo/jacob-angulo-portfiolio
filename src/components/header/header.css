@@ -7,14 +7,14 @@
 }
 
 .header nav a {
-    padding-left: 20px;
+    padding-right: 20px;
     color: #B1B1B1;
 }
 
 .fa-compact-disc {
     color: #007ACC;
-    padding: 1.1vw;
-    font-size: 2.3vw;
+    padding: 1.4vw;
+    font-size: 2vw;
     animation-name: spin;
     animation-duration: 2.5s;
     animation-iteration-count: infinite; 
