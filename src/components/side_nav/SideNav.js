@@ -1,5 +1,5 @@
 import React from 'react';
-import '../side_nav/side-nav.css'
+import '../side_nav/nav-bar.css'
 
 class SideNav extends React.Component {
     render() {
