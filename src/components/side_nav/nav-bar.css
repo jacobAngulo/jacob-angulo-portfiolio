@@ -1,17 +1,19 @@
 .side-nav {
     background: #333333;
     height: 95vh;
-    width: 5vw;
-    justify-content: center;
     display: flex;
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
-.side-nav nav {
+.side-nav-nav {
+    width: 5vw;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.side-nav nav a {
+.side-nav-nav a {
     padding-top: 5vh;
 }
 
@@ -27,3 +29,82 @@
     color: #FFFFFF
 }
 
+.side-nav-explorer h2 {
+    height: 40px;
+    color: #CCCCCC;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 12.5px;
+    padding-left: 2.5vw;
+    font-weight: 100;
+}
+
+.side-nav-explorer section {
+    background: #383838;
+    color: #CCCCCC;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.explore-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.explorer-tab {
+    align-items: center;
+    height: 30px;
+    display: flex;
+}
+
+.explorer-arrow-closed {
+    height: 0;
+    width: 1.5vw;
+    margin-left: 1vw;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #CCCCCC;
+    border-top: 5px solid transparent;
+}
+
+.explorer-arrow-open {
+    height: 0;
+    width: 0;
+    margin-left: 1vw;
+    margin-right: .95vw;
+    border-right: 3.5px solid #CCCCCC;
+    border-bottom: 3.5px solid #CCCCCC;
+    border-left: 3.5px solid transparent;
+    border-top: 3.5px solid transparent;
+}
+
+.projects-nav-open {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #252526;
+    padding-left: 2.5vw;
+}
+
+.projects-nav-link {
+    font-weight: 100;
+}
+
+.projects-nav-closed {
+    display: none;
+}
+
+.open {
+    width: 15vw;
+    background: #252526;
+    display: block;
+}
+
+.closed {
+    display: none;
+}

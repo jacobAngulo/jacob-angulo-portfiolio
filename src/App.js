@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/header/Header';
 import SideNav from './components/side_nav/SideNav';
 import ContentDisplay from './components/content/ContentDisplay';
+import profileData from './profileData';
 import './app.css'
 
 class App extends React.Component {
@@ -10,7 +11,9 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <div className='main-content'>
-          <SideNav />
+          <SideNav
+          projects={profileData.projects} 
+          />
           <ContentDisplay />
         </div>
       </div>

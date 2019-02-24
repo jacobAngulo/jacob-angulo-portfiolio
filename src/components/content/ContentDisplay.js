@@ -7,7 +7,7 @@ class ContentDisplay extends React.Component {
     }
     render() {
         return (
-            <div className='main-content'></div>
+            <div className='main-content'>oi</div>
         )
     }
 }

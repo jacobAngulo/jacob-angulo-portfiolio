@@ -14,13 +14,20 @@ class SideNav extends React.Component {
         if(this.state.folder === false && this.state.search === true) {
             this.setState({
                 folder: true,
-                search: false
+                search: false,
+                projects: false
             })
         } else {
             this.setState({
                 folder: !this.state.folder
             })
         }
+    }
+
+    handleOpenProjectsTab = () => {
+        this.setState({
+            projects: !this.state.projects
+        })
     }
 
     handleOpenSearchTab = () => {
@@ -39,7 +46,7 @@ class SideNav extends React.Component {
     render() {
         return (
             <div className='side-nav'>
-                <nav>
+                <nav className='side-nav-nav'>
                     <a 
                     name={'folder'}
                     onClick={this.handleOpenFilesTab}>
@@ -55,6 +62,21 @@ class SideNav extends React.Component {
                         </i>                    
                     </a>
                 </nav>
+                <div className={`side-nav-explorer ${this.state.folder ? 'open' : 'closed'}`}>
+                    <h2>EXPLORER</h2>
+                    <section onClick={this.handleOpenProjectsTab} className='explorer-section'>
+                        <div className='explorer-tab'>
+                            <span className={`${this.state.projects ? 'explorer-arrow-open' : 'explorer-arrow-closed'}`}></span><h3>PROJECTS</h3>
+                        </div>
+                        <nav className={`${this.state.projects ? 'projects-nav-open' : 'projects-nav-closed'}`}>
+                        {this.props.projects.map(project => {
+                            return <a
+                            className='projects-nav-link'
+                            >{project.name}</a>
+                        })}
+                        </nav>
+                    </section>
+                </div>
             </div>
         )
     }

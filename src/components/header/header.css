@@ -16,8 +16,9 @@
     padding: 1.4vw;
     font-size: 2vw;
     animation-name: spin;
-    animation-duration: 2.5s;
+    animation-duration: 2s;
     animation-iteration-count: infinite; 
+    animation-timing-function: linear;
 }
 
 @keyframes spin {
