@@ -1,5 +1,6 @@
 import React from 'react';
-import '../side_nav/nav-bar.css';
+import SideNavLinkContent from './side-nav-link-content/SideNavLinkContent'
+import '../side-nav/nav-bar.css';
 
 class SideNav extends React.Component {
     constructor(props) {
@@ -64,15 +65,17 @@ class SideNav extends React.Component {
                 </nav>
                 <div className={`side-nav-explorer ${this.state.folder ? 'open' : 'closed'}`}>
                     <h2>EXPLORER</h2>
-                    <section onClick={this.handleOpenProjectsTab} className='explorer-section'>
-                        <div className='explorer-tab'>
+                    <section className='explorer-section'>
+                        <div onClick={this.handleOpenProjectsTab} className='explorer-tab'>
                             <span className={`${this.state.projects ? 'explorer-arrow-open' : 'explorer-arrow-closed'}`}></span><h3>PROJECTS</h3>
                         </div>
                         <nav className={`${this.state.projects ? 'projects-nav-open' : 'projects-nav-closed'}`}>
                         {this.props.projects.map(project => {
-                            return <a
-                            className='projects-nav-link'
-                            >{project.name}</a>
+                            return (
+                                <SideNavLinkContent
+                                project={project}
+                                />
+                            )
                         })}
                         </nav>
                     </section>
