@@ -74,6 +74,7 @@ class SideNav extends React.Component {
                             return (
                                 <SideNavLinkContent
                                 project={project}
+                                changeContent={this.props.changeContent}
                                 />
                             )
                         })}
