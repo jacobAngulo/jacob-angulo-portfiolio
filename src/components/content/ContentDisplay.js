@@ -6,27 +6,30 @@ const ContentDisplay = {
             return (
                 <div className='main-content'>
                 <pre>
-                    <code>creating</code>
-                    <code>a</code>
-                    <code>modern</code>
-                    <code>web</code>
+                    <code>creating a modern web</code>
                 </pre>
             </div>
             )
         },
         OerBookr: function() {
             return(
-                <h1>oer bookr</h1>
+                <pre>
+                    <code>oer bookr</code>
+                </pre>
             )
         },
         TodoApp: function() {
             return (
-                <h1>todo app</h1>
+                <pre>
+                    <code>todo app</code>
+                </pre>
             )
         },
         InstaClone: function() {
             return(
-                <h1>insta clone</h1>
+                <pre>
+                    <code>insta clone</code>
+                </pre>
             )
         }
 }

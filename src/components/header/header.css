@@ -7,6 +7,7 @@
 }
 
 .header nav a {
+    text-decoration: none;
     padding-right: 20px;
     color: #B1B1B1;
 }

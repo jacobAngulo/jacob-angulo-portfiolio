@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 class SideNavLinkContent extends React.Component {
     constructor(props) {
@@ -14,10 +15,6 @@ class SideNavLinkContent extends React.Component {
         })
     }
 
-    handleContentChange = () => {
-        this.props.changeContent(this.props.project.component)
-    }
-
     render() {
         return (
             <div>
@@ -30,25 +27,25 @@ class SideNavLinkContent extends React.Component {
                 </a> 
                 <nav className={`nested-explorer-nav ${this.state.opened ? 'projects-nav-open' : 'projects-nav-closed'}`}>
                     <a 
-                    target='_blank'
-                    href={this.props.project.repo} 
-                    className='nested-link'>
-                    <i class="nested-link-icon fas fa-seedling"></i>
-                    {this.props.project.name}.githubRepo
+                        target='_blank'
+                        href={this.props.project.repo} 
+                        className='nested-link'>
+                        <i class="nested-link-icon fas fa-seedling"></i>
+                        {this.props.project.name}.githubRepo
                     </a>
                     <a
-                    target='_blank'
-                    href={this.props.project.link} 
-                    className='nested-link'>
-                    <i class="nested-link-icon fas fa-lemon"></i>                    
-                    {this.props.project.name}.netlifySite
+                        target='_blank'
+                        href={this.props.project.link} 
+                        className='nested-link'>
+                        <i class="nested-link-icon fas fa-lemon"></i>                    
+                        {this.props.project.name}.netlifySite
                     </a>
-                    <a
-                    onClick={this.handleContentChange}
-                    className='nested-link'>
-                    <i class="nested-link-icon fas fa-pepper-hot"></i>                    
-                    {this.props.project.name}.ReadMe
-                    </a>
+                    <Link
+                        to={`/${this.props.project.name}`}
+                        className='nested-link'>
+                        <i class="nested-link-icon fas fa-pepper-hot"></i>                    
+                        {this.props.project.name}.ReadMe
+                    </Link>
                 </nav>
             </div>
         )

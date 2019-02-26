@@ -1,5 +1,6 @@
 import React from 'react';
-import '../header/header.css'
+import '../header/header.css';
+import { Link } from 'react-router-dom'
 
 class Header extends React.Component {
     render() {
@@ -7,12 +8,12 @@ class Header extends React.Component {
             <div className='header'>
                 <i class="fas fa-compact-disc"></i>
                 <nav>
-                    <a>Hello</a>
-                    <a>And</a>
-                    <a>Welcome</a>
-                    <a>To</a>
-                    <a>My</a>
-                    <a>Portfolio</a>
+                    <Link to='/'>Hello</Link>
+                    <Link to='/'>And</Link>
+                    <Link to='/'>Welcome</Link>
+                    <Link to='/'>To</Link>
+                    <Link to='/'>My</Link>
+                    <Link to='/'>Portfolio</Link>
                 </nav>
             </div>
         )

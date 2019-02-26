@@ -5,21 +5,9 @@ import ContentDisplay from './components/content/ContentDisplay';
 import profileData from './profileData';
 import './app.css'
 import Footer from './components/footer/Footer';
+import { Route } from 'react-router-dom'
 
 class App extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      content: ContentDisplay.MainContent
-    }  
-  }
-
-  changeContent = (newContent) => {
-    this.setState({
-      content: newContent
-    })
-  }
-
   render() {
     return (
       <div className="App">
@@ -29,7 +17,10 @@ class App extends React.Component {
           changeContent={this.changeContent}
           projects={profileData.projects} 
           />
-          <this.state.content />
+          <Route exact path='/' component={ContentDisplay.MainContent}/>
+          <Route path='/insta-clone' component={ContentDisplay.InstaClone}/>
+          <Route path='/oer-bookr' component={ContentDisplay.OerBookr}/>
+          <Route path='/todo-app' component={ContentDisplay.TodoApp}/>
         </div>
         <Footer />
       </div>
